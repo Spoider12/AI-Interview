@@ -14,6 +14,12 @@ authRoutes.post("/register", authController.registerUserController);
   * @access Public
   */
 authRoutes.post("/login", authController.loginUserController);
+/**
+ * @route GET /api/auth/logout
+ * @desc Logout a user
+ * @access Public
+ */
+authRoutes.get("/logout", authController.logoutUserController);
   
 
 module.exports = authRoutes;
