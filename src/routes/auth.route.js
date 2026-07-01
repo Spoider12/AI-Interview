@@ -8,6 +8,12 @@ const authRoutes = Router();
  * @access Public
  */
 authRoutes.post("/register", authController.registerUserController);
- 
+ /**
+  * @route POST /api/auth/login
+  * @desc Login an existing user
+  * @access Public
+  */
+authRoutes.post("/login", authController.loginUserController);
+  
 
 module.exports = authRoutes;
