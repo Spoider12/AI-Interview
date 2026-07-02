@@ -82,6 +82,11 @@ async function loginUserController(req,res){
         }
     })
 }
+/**
+ * @name logoutUserController
+ * @description logout a user by blacklisting the token and clearing the cookie
+ * @access Public
+ */
 async function logoutUserController(req,res){
     const token = req.cookies.token
 
@@ -94,6 +99,19 @@ async function logoutUserController(req,res){
         message: "User logged out successfully"
     })
 }
+/**
+ * @name getMeController
+ * @description get the logged in user details
+ * @access Private
+ */
+async function getmeController(req,res){
+    const user = await userModel.findById(req.user.id)
+    res.status(200).json({
+        id: user._id,
+        username: user.username,
+        email: user.email
+    })
+}
 
 
 
@@ -101,4 +119,5 @@ module.exports = {
     registerUserController,
     loginUserController,
     logoutUserController,
+    getmeController,
 }
