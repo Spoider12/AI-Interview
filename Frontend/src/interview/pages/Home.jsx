@@ -10,14 +10,15 @@ const Home = () => {
             </div>
             <div className="right">
                 <div className="input-group">
-                    <label htmlFor='resume'>Upload your Resume</label>
-                    <input type='file' name='resume' id='resume' accept='.pdf'/>
+                    <p>Resume <small>(Use  Both Resume and Self Description paste together for Best Results)</small></p>
+                    <label className='file-label' htmlFor='resume'>Upload  Resume</label>
+                    <input hidden  type='file' name='resume' id='resume' accept='.pdf'/>
                 </div>
                 <div className="input-group">
                     <label htmlFor='selfDescription'>Self Description</label>
                     <textarea name='selfDescription' id='sefDescription' placeholder='Enter your Self Description here'></textarea>
                 </div>
-                <button className='generate-btn'>Generate Interview Report</button>
+                <button className='button primary-button'>Generate Interview Report</button>
             </div>
         </div>
         
