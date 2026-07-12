@@ -6,11 +6,12 @@ const Home = () => {
     <main className='home'>
         <div className="interview-input-group">
             <div className="left">
+                <label htmlFor='jobDescription'>Job Description</label>
                 <textarea name='jobDescription' id='jobDescription' placeholder='Enter your Job Description here...'></textarea>
             </div>
             <div className="right">
                 <div className="input-group">
-                    <p>Resume <small>(Use  Both Resume and Self Description paste together for Best Results)</small></p>
+                    <p>Resume <small className='high-light'>(Use  Both Resume and Self Description paste together for Best Results)</small></p>
                     <label className='file-label' htmlFor='resume'>Upload  Resume</label>
                     <input hidden  type='file' name='resume' id='resume' accept='.pdf'/>
                 </div>
