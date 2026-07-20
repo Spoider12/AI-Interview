@@ -53,9 +53,10 @@ export const useAuth = () =>{
 
             try {
               const data = await getMe()
-              setUser(data)  
+              setUser(data || null)
             } catch (error) {
-                throw error
+                console.error("Auth check failed:", error)
+                setUser(null)
             } finally{
                  setLoading(false)
             }   
